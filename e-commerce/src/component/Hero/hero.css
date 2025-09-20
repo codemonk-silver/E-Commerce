@@ -1,0 +1,348 @@
+/* hero.css - Updated with slider functionality */
+
+/* Slider Wrapper */
+.slider-wrapper {
+  position: relative;
+}
+
+/* Your existing styles with slider enhancements */
+.herocontainer {
+  position: relative;
+  background: #f1f2f3;
+  padding: 0 10%;
+  height: 75vh;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-basis: 100%;
+  transition: background 0.5s ease; /* Added smooth background transition */
+}
+
+.leftHeroContainer {
+  position: absolute;
+  top: 30%;
+  width: 40%;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease forwards;
+}
+
+/* Slide in animation for left content */
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.leftHeroText {
+  flex-basis: 50%;
+}
+
+.leftHeroText p {
+  font-size: .6rem;
+  margin-bottom: 1rem;
+  color: #666;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.leftHeroText h1 {
+  font-size: 3rem;
+  line-height: 1;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: bold;
+}
+
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: .7rem 1.3rem;
+  background: #029fae;
+  color: white;
+  border: none;
+  border-radius: .3rem;
+  cursor: pointer;
+  font-size: .65rem;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #218838;
+  transform: translateX(2px);
+}
+
+.arrow-btn:hover .btn-arrow {
+  transform: translateX(3px);
+}
+
+.btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.rightHeroContainer {
+  position: absolute;
+  top: -15%;
+  left: 55%;
+  background: #E1e3e5;
+  border-radius: 50%;
+  width: 450px;
+  height: 450px;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: slideInRight 0.8s ease 0.2s forwards;
+}
+
+/* Slide in animation for right content */
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.rightHeroImg {
+  position: absolute;
+  top: 30%;
+  left: -20%;
+}
+
+.rightHeroImg img {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.hero-image.slide-2 {
+  transform: scale(0.7); /* 80% size for slide 2 */
+}
+
+.hero-image.slide-3 {
+  transform: scale(0.7); /* 70% size for slide 3 */
+}
+
+.rightHeroImg img:hover {
+  transform: scale(1.05);
+}
+
+/* Override hover for smaller slides */
+.hero-image.slide-2:hover {
+  transform: scale(0.85); /* Slightly bigger on hover but still smaller */
+}
+
+.hero-image.slide-3:hover {
+  transform: scale(0.75); /* Slightly bigger on hover but still smaller */
+}
+
+
+.heroDis {
+  position: absolute;
+  top: 0%;
+  left: 65%;
+  background: whitesmoke;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 2;
+}
+
+.heroDis h1 {
+  font-size: 1.3rem;
+  color: red;
+  margin: 0;
+}
+
+.heroDis p {
+  font-size: .6rem;
+  margin: 0;
+  color: #666;
+}
+
+/* Slider Controls */
+.slider-controls {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.9);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  font-size: 24px;
+  color: #333;
+}
+
+.slider-controls:hover {
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+
+
+/* Slide Indicators */
+.slide-indicators {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.indicator:hover {
+  background: rgba(255,255,255,0.8);
+  transform: scale(1.1);
+}
+
+.indicator.active {
+  background: #029fae;
+  transform: scale(1.2);
+  border: 2px solid white;
+  box-shadow: 0 2px 8px rgba(2, 159, 174, 0.3);
+}
+
+/* Slide Counter */
+.slide-counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(0,0,0,0.7);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  z-index: 10;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .herocontainer {
+    height: 60vh;
+    padding: 0 5%;
+  }
+  
+  .leftHeroText h1 {
+    font-size: 2rem;
+  }
+  
+  .leftHeroText p {
+    font-size: 0.55rem;
+  }
+  
+  .rightHeroContainer {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+  }
+
+  .slider-controls {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+
+  .next-btn {
+    right: 10px;
+  }
+
+  .slide-counter {
+    top: 10px;
+    right: 10px;
+    padding: 6px 12px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .leftHeroContainer {
+    width: 60%;
+  }
+
+  .leftHeroText h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .leftHeroText p {
+    font-size: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .rightHeroContainer {
+    width: 250px;
+    height: 250px;
+  }
+
+  .heroDis {
+    width: 60px;
+    height: 60px;
+  }
+
+  .heroDis h1 {
+    font-size: 1rem;
+  }
+
+  .heroDis p {
+    font-size: 0.5rem;
+  }
+
+  .arrow-btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.6rem;
+  }
+}
+
+/* Loading animation for smooth transitions */
+.herocontainer[key] {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.8;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

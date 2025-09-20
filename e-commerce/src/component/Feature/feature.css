@@ -1,0 +1,38 @@
+.featureContainer{
+    background: gainsboro;
+    width: 50%;
+    height: 8vh;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 20;
+    border-radius: .3rem;
+    top: -30px;
+}
+
+.featureContent{
+    position: absolute;
+    top: 0%;
+    display: flex;
+    padding: 10px 20px;
+    
+}
+
+.featureCard img{
+    width: 20%;
+    height: auto;
+}
+
+.featureCard{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.featureCard h5{
+    font-weight: 400;
+}
+
+.cardDes p{
+    font-size: .6rem;
+}

@@ -43,7 +43,7 @@ const Navbar = () => {
                 <div className='navdropdown'>
                      <input type="checkbox" id="services-dropdown" className="dropdown-toggle" />
                     <label for="services-dropdown" className="dropdown-label">
-                        <i class="fas fa-bars"></i>All Categories 
+                        <i class="fas fa-bars"></i>  All Categories 
                     </label>
                     <div className="dropdown-content">
                         <a href="#web-design">Web Design
