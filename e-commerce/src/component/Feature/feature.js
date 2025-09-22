@@ -13,46 +13,51 @@ import Pipedrive from '../../asset/Pipedrive.svg';
 
 const Feature = () => {
   return (
-    <div className='featureContainer'>
-        <div className='featureContent'>
-            <div className='featureCard'>
-                <img src={featureimg} alt='' />
-                <span className='cardDes'>
-                    <h5>Discount</h5>
-                    <p>Every Week New Sales.</p>
-                </span>
+        <section className='featureContainer'>
+            <div className='featureWrapper'>
+                <div className='featureContent'>
+                    <div className='featureCard'>
+                        <img src={featureimg} alt='' />
+                        <span className='cardDes'>
+                            <h5>Discount</h5>
+                            <p>Every Week New Sales.</p>
+                        </span>
+                    </div>
+                    <div className='featureCard'>
+                        <img src={truckicon} alt='' />
+                        <span className='cardDes'>
+                            <h5>Discount</h5>
+                            <p>Every Week New Sales.</p>
+                        </span>
+                    </div>
+                    <div className='featureCard'>
+                        <img src={clockicon} alt='' />
+                        <span className='cardDes'>
+                            <h5>Discount</h5>
+                            <p>Every Week New Sales.</p>
+                        </span>
+                    </div>
+                    <div className='featureCard'>
+                        <img src={cureicon} alt='' />
+                        <span className='cardDes'>
+                            <h5>Discount</h5>
+                            <p>Every Week New Sales.</p>
+                        </span>
+                    </div>
+                </div>
             </div>
-            <div className='featureCard'>
-                <img src={truckicon} alt='' />
-                <span className='cardDes'>
-                    <h5>Discount</h5>
-                    <p>Every Week New Sales.</p>
-                </span>
-            </div>
-            <div className='featureCard'>
-                <img src={clockicon} alt='' />
-                <span className='cardDes'>
-                    <h5>Discount</h5>
-                    <p>Every Week New Sales.</p>
-                </span>
-            </div>
-            <div className='featureCard'>
-                <img src={cureicon} alt='' />
-                <span className='cardDes'>
-                    <h5>Discount</h5>
-                    <p>Every Week New Sales.</p>
-                </span>
-            </div>
-        </div>
-         <div className='companyLogo'>
+
+             <div className='companyLogo'>
                 <img src={Zapierlogo} alt='' />
                 <img src={Pipedrive} alt='' />
                 <img src={CIBBank} alt='' />
                 <img src={ChaseBank} alt='' />
                 <img src={mozlogo} alt='' />
                 <img src={PandaDoc} alt='' />
+                <img src={Pipedrive} alt='' />
             </div>
-    </div>
+
+    </section>
   )
 }
 

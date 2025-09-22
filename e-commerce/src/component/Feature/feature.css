@@ -1,6 +1,11 @@
 .featureContainer{
+    position: relative;
+    height: 20vh;
+}
+
+.featureWrapper{
     background: gainsboro;
-    width: 50%;
+    width: 60%;
     height: 10vh;
     margin-left: auto;
     margin-right: auto;
@@ -8,15 +13,17 @@
     z-index: 20;
     border-radius: .3rem;
     top: -40px;
+   
 }
 
 .featureContent{
     position: absolute;
-    top: 15%;
+    top: 10%;
     display: flex;
     padding: 10px 20px;
-    
 }
+
+
 
 .featureCard img{
     width: 20%;
@@ -40,14 +47,18 @@
 
 .companyLogo{
     position: absolute;
-    top: 150%;
+    top: 35%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 4rem;
+    width: 100%;
+    justify-content: center;
+
 }
 
 
 .companyLogo img{
-    width: 10%;
+    width: 5%;
     height: auto;
 }
+
