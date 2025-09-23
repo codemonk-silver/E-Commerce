@@ -3,6 +3,7 @@ import Hero from './component/Hero/hero';
 import Feature from "./component/Feature/feature";
 import Product from "./component/Product/product";
 import Category from "./component/Category/category";
+import Our from './component/Our/our';
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
       <Feature />
       <Product />
       <Category />
+      <Our />
     </div>
   );
 }

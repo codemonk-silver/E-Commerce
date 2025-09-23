@@ -4,8 +4,9 @@
 }
 
 .categoryTitle {
-  margin-bottom: 0rem;
+  margin-bottom: 1.5rem;
   font-size: 1.4rem;
+  padding: 0% 20%;
   
 }
 
@@ -13,7 +14,6 @@
   position: relative;
   width: 100%;
   margin: 0 auto;
-  overflow: hidden;
 }
 
 .categoryCarousel {
@@ -22,6 +22,7 @@
   align-items: center;
   position: relative;
   height: 350px;
+  overflow: hidden;
 }
 
 .carouselItem {
@@ -38,11 +39,37 @@
   margin-left: 1rem;
 }
 
+/* Caption overlay */
+.carouselCaption {
+  position: absolute;
+  bottom: 8px; /* near bottom of image */
+  left: 53%;
+  transform: translateX(-50%);
+  width: 93.5%;
+  background: rgba(0, 0, 0, 0.4); /* transparent background */
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.captionTitle {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.captionSubtitle {
+  font-size: 0.8rem;
+  margin: 2px 0 0;
+  opacity: 0.9;
+}
+
 /* Button group ABOVE the carousel */
 .buttonGroup {
   position: absolute;
-  top: -60px;          /* adjust height above images */
-  left: 50%;
+  top: -50px;          /* adjust height above images */
+  left: 77%;
   transform: translateX(-50%);
   display: flex;
   gap: 10px;
@@ -52,7 +79,7 @@
 .carouselBtn {
   background: rgba(255, 255, 255, 0.85);
   border: none;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   padding: 0.4em 0.7em;

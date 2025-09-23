@@ -57,6 +57,11 @@ const Category = () => {
             }}
           >
             <img src={img} alt={`slide-${index}`} />
+              {/* Caption overlay */}
+            <div className="carouselCaption">
+                <h3 className="captionTitle">Wing Chair</h3>
+                <p className="captionSubtitle">3,455 products</p>
+            </div>
           </div>
         );
       })}

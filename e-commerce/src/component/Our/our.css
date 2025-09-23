@@ -1,0 +1,85 @@
+.ourContainer{
+    padding: 0% 20%;
+}
+
+.ourTitle{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.ourNav{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.ourNav a{
+    text-decoration: none;
+    color: black;
+     position: relative;
+    padding-bottom: 2px; /* space for underline */
+}
+
+/* underline animation */
+.ourNav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: .2rem;
+  width: 0;
+  height: 2px;
+  background-color: green;
+  transition: width 0.3s ease;
+}
+
+.ourNav a:hover::after {
+  width: 100%;
+}
+
+.ourCarousel {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 2rem;
+}
+
+.ourCard1{
+    position: relative;
+}
+
+.ourCard1 .badgeNew{
+    position: absolute;
+    top: 5%;
+    left: 7%;
+    font-size: .6rem;
+}
+
+.ourCard1 .heartIcon{
+    position: absolute;
+    top: 5%;
+    left: 80%;
+    font-size: 1.5rem;
+}
+
+.ourCard1 img{
+    width: 100%;
+    height: auto;
+    border-radius: .4rem;
+}
+
+.ourCardContent{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.ourCardContent .cartIcon{
+    font-size: 1.3rem;
+    margin-top: .4rem;
+}
+
+.ourCardDesc p{
+    font-size: .8rem;
+}
