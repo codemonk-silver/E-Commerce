@@ -1,7 +1,7 @@
 .productContainer {
   background: yellowgreen;
   padding: 1% 20%;
-  height: 70vh;
+  height: 20vh;
   overflow: hidden;
 }
 
@@ -53,12 +53,17 @@
   gap: 0.8em;
   width: 100%;
   overflow-x: hidden;
-  padding-bottom: 1em;
+  overflow-y: hidden;
 }
 
 /* Card wrapper for entrance animation */
 .cardWrapper {
   flex: 0 0 13.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  overflow: hidden;
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
@@ -75,10 +80,11 @@
   width: 100%;
   border-radius: 0.5rem;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  object-fit: contain center;
 }
 
 .productCard:hover {
-  transform: scale(1.08) rotate(-1deg);
+  transform: scale(1.08);
   box-shadow: 0px 8px 22px rgba(0, 0, 0, 0.35);
 }
 
@@ -86,7 +92,9 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 12em;
+  overflow: hidden;
+  border-radius: .5rem;
 }
 
 .badgeNew {
@@ -95,7 +103,7 @@
   left: 10px;   /* not touching left */
   background: crimson;
   color: white;
-  font-size: 0.75rem;
+  font-size: 0.55rem;
   font-weight: bold;
   padding: 3px 8px;
   border-radius: 4px;
@@ -106,7 +114,7 @@
   position: absolute;
   top: 10px;    /* aligned with badgeNew */
   right: 10px;  /* not touching right */
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: white;
   background: rgba(0,0,0,0.5);
   padding: 4px;
@@ -120,6 +128,39 @@
   transform: scale(1.2);
   color: crimson;
 }
+
+.productDesc {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: left;
+  color: #007580;
+  margin-top: 8px;
+}
+
+.productFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   margin-top: 6px;
+}
+
+.price {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.cartIcon {
+  font-size: 1rem;
+  color: #272343;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.cartIcon:hover {
+  transform: scale(1.2);
+  color: #007580;
+}
+
 
 /* ✨ Animations */
 @keyframes fadeUp {
