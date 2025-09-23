@@ -1,4 +1,66 @@
-.categoryCarousel img{
-    width: 20%;
-    height: auto;
+.categoryContainer {
+  padding: 3% 0%;
+
+}
+
+.categoryTitle {
+  margin-bottom: 0rem;
+  font-size: 1.4rem;
+  
+}
+
+.carouselWrapper {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.categoryCarousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 350px;
+}
+
+.carouselItem {
+  position: absolute;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.carouselItem img {
+  width: 250px;
+  height: 300px; /* uniform size */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  margin-left: 1rem;
+}
+
+/* Button group ABOVE the carousel */
+.buttonGroup {
+  position: absolute;
+  top: -60px;          /* adjust height above images */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.carouselBtn {
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 0.4em 0.7em;
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+}
+
+.carouselBtn:hover {
+  background: rgba(255, 255, 255, 1);
 }
