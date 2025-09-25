@@ -5,6 +5,8 @@ import Product from "./component/Product/product";
 import Category from "./component/Category/category";
 import Our from './component/Our/our';
 import Testimonial from "./component/Testimonial/testimonial";
+import Recent from "./component/Recent/recent";
+import Footer from "./component/Footer/footer";
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
       <Category />
       <Our />
       <Testimonial />
+      <Recent />
+      <Footer />
     </div>
   );
 }
