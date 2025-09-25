@@ -1,0 +1,113 @@
+.footerContainer{
+    padding: 3% 20%;
+}
+
+.footerWrapper{
+    display: flex;
+    gap: 4rem;
+}
+
+
+.footerInfo{
+    width: 10rem;
+}
+
+.footerInfo h1{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerInfo p{
+    margin-bottom: 1rem;
+    font-size: .7rem;
+}
+
+.footerInfo .socialLinks a{
+    margin-right: 1.3rem;
+}
+
+.footerCategory h1{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerCategory .footerCategoryLinks{
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    line-height: 1.7;
+}
+
+.footerCategory .footerCategoryLinks a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerSupport h1{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerSupportLinks{
+    display: flex;
+    flex-direction: column;
+    font-size: .7rem;
+    line-height: 1.7;
+}
+
+.footerSupportLinks a{
+    text-decoration: none;
+    color: black;
+}
+
+.footerNewsletter h1{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.footerForm{
+    margin-bottom: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.footerForm input{
+    padding: 5px 12px;
+    border-radius: .3rem;
+    border: 1px solid black;
+    
+}
+
+.footerForm .footerBtn{
+    padding: 5px 12px;
+    border: none;
+    border-radius: .3rem;
+    background: green;
+    color: white;
+}
+
+.footerNewsletter p{
+    font-size: .7rem;
+}
+
+.footerClosure{
+    padding: 0% 20%;
+}
+
+.footerClosureWrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerClosureWrapper p{
+    font-size: .8rem;
+}
+
+.footerRightClosure{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
