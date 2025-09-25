@@ -1,5 +1,6 @@
-import React from 'react'
-import './navbar.css'
+import React from 'react';
+import './navbar.css';
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -34,7 +35,7 @@ const Navbar = () => {
                 <i class="far fa-heart"></i>
                 </button>
                 <button>
-                <i class="fas fa-user"></i>
+                <i class="fas fa-user"><Link to="/account"></Link></i>
                 </button>
             </div>
         </div>
