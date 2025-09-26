@@ -24,11 +24,13 @@
   position: relative;
   height: 350px;
   overflow: hidden;
+  perspective: 1000px; /* subtle depth */
 }
 
 .carouselItem {
   position: absolute;
   transition: transform 0.6s ease, opacity 0.6s ease;
+  will-change: transform, opacity;  /* performance boost */
 }
 
 .carouselItem img {
@@ -38,6 +40,12 @@
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   margin-left: 1rem;
+}
+
+/* Active (centered) image bigger */
+.carouselItem.active img {
+  transform: scale(1.05);
+  transition: transform 0.6s ease-in-out;
 }
 
 /* Caption overlay */
@@ -86,9 +94,58 @@
   padding: 0.4em 0.7em;
   border-radius: 50%;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: background 0.3s;
+  transition: background 0.3s, transform 0.3s;
 }
 
 .carouselBtn:hover {
   background: rgba(255, 255, 255, 1);
+  transform: scale(1.1);
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .categoryCarousel {
+    height: 280px;
+  }
+
+  .carouselItem img {
+    width: 180px;
+    height: 220px;
+  }
+
+  .carouselCaption {
+    font-size: 0.85rem;
+    padding: 4px 8px;
+  }
+
+  .buttonGroup {
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .categoryCarousel {
+    height: 220px;
+  }
+
+  .carouselItem img {
+    width: 130px;
+    height: 160px;
+  }
+
+  .captionTitle {
+    font-size: 0.8rem;
+  }
+
+  .captionSubtitle {
+    font-size: 0.65rem;
+  }
+
+  .carouselBtn {
+    font-size: 0.9rem;
+    padding: 0.3em 0.6em;
+  }
 }

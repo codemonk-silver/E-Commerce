@@ -53,6 +53,15 @@
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
+   scroll-behavior: smooth;
+   will-change: transform;
+   padding: 1rem 0;
+   /* Snap scrolling */
+  scroll-snap-type: x mandatory;
+
+  /* Hide scrollbar */
+  scrollbar-width: none; /* Firefox */
+
 }
 
 /* Card wrapper for entrance animation */
@@ -66,7 +75,13 @@
   opacity: 0;
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
+   /* Snap point */
+  scroll-snap-align: start;
+
 }
+
+
+
 .cardWrapper:nth-child(odd) {
   animation-delay: 0.2s;
 }
@@ -192,5 +207,72 @@
   50% {
     transform: scale(1.1);
     background: #444;
+  }
+}
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .productTitle {
+    font-size: 1.5rem;
+  }
+
+  .cardWrapper {
+    width: 180px;
+  }
+
+  .carouselButtons button {
+    font-size: 1.2rem;
+    padding: .4rem .8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .productContainer {
+    padding: 1rem;
+  }
+
+  .productTitle {
+    font-size: 1.2rem;
+  }
+
+  .cardWrapper {
+    width: 150px;
+  }
+
+  .productDesc {
+    font-size: .8rem;
+  }
+
+  .carouselButtons {
+    top: 35%;
+  }
+
+  .carouselButtons button {
+    font-size: 1rem;
+    padding: .3rem .6rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .cardWrapper {
+    width: 120px;
+  }
+
+  .productTitle {
+    font-size: 1rem;
+  }
+
+  .productDesc {
+    font-size: .7rem;
+  }
+
+  .price {
+    font-size: .8rem;
+  }
+
+  .cartIcon {
+    font-size: 1rem;
   }
 }

@@ -63,3 +63,122 @@
     height: auto;
 }
 
+
+
+/* 🔽 Tablet (≤ 992px) */
+@media (max-width: 992px) {
+  .featureWrapper {
+    width: 80%;
+    height: auto;
+    top: -30px;
+    padding: 10px;
+  }
+
+  .featureContent {
+    flex-wrap: wrap;
+    justify-content: center;
+    top: 15%;
+  }
+
+  .featureCard img {
+    width: 30px;
+  }
+
+  .cardDes p {
+    font-size: .65rem;
+  }
+
+  .companyLogo {
+    gap: 2rem;
+    top: 40%;
+  }
+
+  .companyLogo img {
+    width: 7%;
+  }
+}
+
+/* 🔽 Mobile (≤ 768px) */
+@media (max-width: 768px) {
+  .featureContainer {
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .featureWrapper {
+    width: 90%;
+    height: auto;
+    top: -20px;
+  }
+
+  .featureContent {
+    position: relative;
+    top: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .featureCard {
+    gap: .75rem;
+  }
+
+  .featureCard img {
+    width: 25px;
+  }
+
+  .featureCard h5 {
+    font-size: .85rem;
+  }
+
+  .cardDes p {
+    font-size: .7rem;
+  }
+
+  .companyLogo {
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    top: auto;
+    margin-top: 1rem;
+    position: relative;
+  }
+
+  .companyLogo img {
+    width: 10%;
+  }
+}
+
+/* 🔽 Small Mobile (≤ 480px) */
+@media (max-width: 480px) {
+  .featureWrapper {
+    width: 95%;
+    border-radius: .2rem;
+    top: -15px;
+  }
+
+  .featureContent {
+    padding: .5rem;
+    gap: .75rem;
+  }
+
+  .featureCard img {
+    width: 20px;
+  }
+
+  .featureCard h5 {
+    font-size: .75rem;
+  }
+
+  .cardDes p {
+    font-size: .6rem;
+  }
+
+  .companyLogo {
+    gap: 1rem;
+  }
+
+  .companyLogo img {
+    width: 15%;
+  }
+}
