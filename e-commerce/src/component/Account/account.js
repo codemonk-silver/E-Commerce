@@ -23,8 +23,8 @@ const Account = () => {
       <div className='accountForm'>
             <p>Sign In</p>
             <div className='formDetails'>
-                <input className='formUser' type='email' placeholder='email' alt='email' />
-                <input className='formUser' type='password' placeholder='password' alt='password' />
+                <input className='formUser' type='email' placeholder='Email' alt='email' />
+                <input className='formUser' type='password' placeholder='Password' alt='password' />
                 <div className='formCheck'>
                     <div className='formLeftCheck'>
                         <input type='checkbox' />
@@ -33,6 +33,10 @@ const Account = () => {
                     <a href=''>Forget Password</a>
                 </div>
                 <button>Sign In</button>
+                <div className='formSignUp'>
+                    <p>Dont have account?</p>
+                    <a href=''>Sign Up</a>
+                </div>
             </div>
       </div>
       
