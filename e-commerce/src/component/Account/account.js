@@ -21,8 +21,21 @@ const Account = () => {
       </div>
 
       <div className='accountForm'>
-            
+            <p>Sign In</p>
+            <div className='formDetails'>
+                <input className='formUser' type='email' placeholder='email' alt='email' />
+                <input className='formUser' type='password' placeholder='password' alt='password' />
+                <div className='formCheck'>
+                    <div className='formLeftCheck'>
+                        <input type='checkbox' />
+                        <p>Remember Me</p>
+                    </div>
+                    <a href=''>Forget Password</a>
+                </div>
+                <button>Sign In</button>
+            </div>
       </div>
+      
     </section>
   )
 }
