@@ -1,6 +1,7 @@
 .featureContainer{
     position: relative;
     height: 20vh;
+    z-index: 1;
 }
 
 .featureWrapper{

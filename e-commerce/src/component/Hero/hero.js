@@ -114,11 +114,6 @@ const Hero = () => {
           />
         ))}
       </div>
-
-      {/* Slide Counter */}
-      <div className="slide-counter">
-        {currentSlide + 1} / {slides.length}
-      </div>
     </div>
   );
 };
