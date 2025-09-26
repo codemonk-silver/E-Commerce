@@ -35,7 +35,7 @@ const Navbar = () => {
                 <i class="far fa-heart"></i>
                 </button>
                 <button>
-                <i class="fas fa-user"><Link to="/account"></Link></i>
+                <Link to="/account"><i class="fas fa-user"></i></Link>
                 </button>
             </div>
         </div>
