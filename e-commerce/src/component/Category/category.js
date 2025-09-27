@@ -196,17 +196,6 @@ const Category = () => {
             />
           ))}
         </div>
-
-        {/* Auto-play indicator */}
-        <div className="autoPlayIndicator">
-          <button
-            className={`autoPlayBtn ${autoPlay ? 'active' : ''}`}
-            onClick={() => setAutoPlay(!autoPlay)}
-            aria-label={autoPlay ? 'Pause auto-play' : 'Resume auto-play'}
-          >
-            {autoPlay ? '⏸️' : '▶️'}
-          </button>
-        </div>
       </div>
     </section>
   );
