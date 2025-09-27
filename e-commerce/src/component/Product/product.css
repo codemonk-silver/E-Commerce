@@ -210,69 +210,80 @@
   }
 }
 
-/* Tablets */
+/* Tablet (≤1024px) */
 @media (max-width: 1024px) {
+  .productContainer {
+    padding: 3% 10%;
+    height: auto;
+  }
+
   .productTitle {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
   }
 
   .cardWrapper {
-    width: 180px;
-  }
-
-  .carouselButtons button {
-    font-size: 1.2rem;
-    padding: .4rem .8rem;
+    flex: 0 0 11em; /* show ~2–3 per row */
   }
 }
 
-/* Mobile */
+/* Mobile (≤768px) */
 @media (max-width: 768px) {
   .productContainer {
-    padding: 1rem;
+    padding: 5% 8%;
+    height: auto;
   }
 
   .productTitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .productCarousel {
+    gap: 1rem;
+    overflow-x: auto; /* allow horizontal swipe */
+    scroll-snap-type: x mandatory;
   }
 
   .cardWrapper {
-    width: 150px;
-  }
-
-  .productDesc {
-    font-size: .8rem;
+    flex: 0 0 80%;   /* ✅ Show one card at a time */
+    margin: 0 auto;  /* center the card */
   }
 
   .carouselButtons {
-    top: 35%;
+    top: -40px;
+    gap: 6px;
   }
 
   .carouselButtons button {
-    font-size: 1rem;
-    padding: .3rem .6rem;
+    font-size: 0.7rem;
+    padding: 4px 6px;
   }
 }
 
-/* Small Mobile */
+/* Small Mobile (≤480px) */
 @media (max-width: 480px) {
-  .cardWrapper {
-    width: 120px;
+  .productContainer {
+    padding: 6% 5%;
   }
 
   .productTitle {
     font-size: 1rem;
   }
 
+  .cardWrapper {
+    flex: 0 0 90%;   /* ✅ Even more focused single card */
+  }
+
   .productDesc {
-    font-size: .7rem;
+    font-size: 0.8rem;
   }
 
   .price {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .cartIcon {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }

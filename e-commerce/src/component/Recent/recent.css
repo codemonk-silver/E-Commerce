@@ -194,3 +194,78 @@
     background: #444;
   }
 }
+
+
+
+/* ✅ Tablets (768px – 1199px) */
+@media (max-width: 1199px) {
+  .recentContainer {
+    padding: 2% 10%;
+    height: auto;
+  }
+  .recentTitle {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .carouselButtons {
+    top: -50px;
+    right: 20px;
+  }
+  .cardWrapper {
+    flex: 0 0 11em;
+  }
+  .recentCard,
+  .imageWrapper {
+    height: 11em;
+  }
+  .recentDesc,
+  .price {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .recentContainer {
+    padding: 5% 5%;
+    height: auto;
+  }
+
+  .recentTitle {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .recentCarousel {
+    gap: 0;
+    scroll-snap-type: x mandatory;
+    overflow-x: auto;
+  }
+
+  .cardWrapper {
+    flex: 0 0 100%; /* One card at a time */
+    scroll-snap-align: start;
+  }
+
+  /* 🔥 Hide navigation buttons on mobile */
+  .carouselButtons {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .recentTitle {
+    font-size: 1rem;
+  }
+
+  .recentDesc {
+    font-size: 0.8rem;
+  }
+
+  .price {
+    font-size: 0.8rem;
+  }
+
+  .cartIcon {
+    font-size: 0.9rem;
+  }
+}

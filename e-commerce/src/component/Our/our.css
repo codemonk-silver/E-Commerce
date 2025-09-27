@@ -83,3 +83,92 @@
 .ourCardDesc p{
     font-size: .8rem;
 }
+
+
+@media (max-width: 1024px) {
+  .ourContainer {
+    padding: 0% 10%;
+  }
+
+  .ourCarousel {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ourTitle {
+    font-size: 1.2rem;
+  }
+
+  .ourCardDesc p {
+    font-size: 0.75rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .ourContainer {
+    padding: 0% 6%;
+  }
+
+  .ourNav {
+    flex-wrap: wrap; /* nav links wrap into two lines */
+    gap: 0.6rem;
+  }
+
+  .ourCarousel {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ourTitle {
+    font-size: 1.1rem;
+  }
+
+  .ourCardContent .cartIcon {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .ourContainer {
+    padding: 0% 4%;
+  }
+
+  .ourNav {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0.5rem;
+  }
+
+  .ourNav a {
+    font-size: 0.8rem;
+  }
+
+  .ourCarousel {
+    grid-template-columns: 1fr;
+  }
+
+  .ourTitle {
+    font-size: 1rem;
+  }
+
+  .ourCard1 .badgeNew {
+    font-size: 0.5rem;
+  }
+
+  .ourCard1 .heartIcon {
+    font-size: 1.2rem;
+    left: 75%;
+  }
+
+  .ourCardDesc h5 {
+    font-size: 0.9rem;
+  }
+
+  .ourCardDesc p {
+    font-size: 0.7rem;
+  }
+
+  .ourCardContent .cartIcon {
+    font-size: 1rem;
+  }
+}
