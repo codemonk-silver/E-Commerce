@@ -138,7 +138,6 @@
   transform: scale(0.75); /* Slightly bigger on hover but still smaller */
 }
 
-
 .heroDis {
   position: absolute;
   top: 0%;
@@ -201,8 +200,6 @@
   right: 20px;
 }
 
-
-
 /* Slide Indicators */
 .slide-indicators {
   position: absolute;
@@ -235,8 +232,6 @@
   border: 2px solid white;
   box-shadow: 0 2px 8px rgba(2, 159, 174, 0.3);
 }
-
-
 
 /* Tablet (≤ 992px) */
 @media (max-width: 992px) {
@@ -294,6 +289,10 @@
     height: auto;
     padding: 2rem 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .leftHeroContainer {
@@ -304,15 +303,31 @@
     animation: none; /* disable slide-in for small screens */
     opacity: 1;
     transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftHeroText {
+    width: 100%;
+    text-align: center;
   }
 
   .leftHeroText h1 {
     font-size: 1.8rem;
     line-height: 1.2;
+    text-align: center;
   }
 
   .leftHeroText p {
     font-size: .75rem;
+    text-align: center;
+  }
+
+  .arrow-btn {
+    align-self: center;
+    margin: 0 auto;
   }
 
   .rightHeroContainer {
@@ -366,11 +381,18 @@
 
   .leftHeroText h1 {
     font-size: 1.4rem;
+    text-align: center;
+  }
+
+  .leftHeroText p {
+    text-align: center;
   }
 
   .arrow-btn {
     padding: .5rem 1rem;
     font-size: .55rem;
+    align-self: center;
+    margin: 0 auto;
   }
 
   .rightHeroContainer {

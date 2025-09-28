@@ -185,17 +185,6 @@ const Category = () => {
           })}
         </div>
 
-        {/* Dot Indicators */}
-        <div className="categoryIndicators">
-          {categoryData.map((_, index) => (
-            <button
-              key={index}
-              className={`categoryDot ${current === index ? 'active' : ''}`}
-              onClick={() => handleItemClick(index)}
-              aria-label={`Go to ${categoryData[index].title}`}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );

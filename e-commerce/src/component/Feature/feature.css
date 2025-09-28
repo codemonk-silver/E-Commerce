@@ -152,7 +152,7 @@
 /* 🔽 Small Mobile (≤ 480px) */
 @media (max-width: 480px) {
   .featureWrapper {
-    width: 95%;
+    width: 90%;
     border-radius: .2rem;
     top: -15px;
   }
