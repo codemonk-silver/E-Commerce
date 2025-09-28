@@ -144,8 +144,34 @@
   }
 
   .ourCarousel {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
   }
+
+  .ourCard1 img{
+    width: 100%;
+  }
+
+  .ourCard1 .heartIcon{
+    position: absolute;
+    top: 5%;
+    left: 50% !important;
+    font-size: 1.5rem;
+}
+
+.ourCard1 .badgeNew{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: .6rem;
+}
+
+.ourCardContent{
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+}
+
 
   .ourTitle {
     font-size: 1rem;

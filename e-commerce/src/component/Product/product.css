@@ -432,12 +432,12 @@
   }
   
   .cardWrapper {
-    flex: 0 0 20em;
+    flex: 0 0 18em;
   }
   
   .productCard,
   .imageWrapper {
-    height: 20em !important;
+    height: 18em !important;
     border-radius: 0.4rem;
     object-fit: cover;
   }
