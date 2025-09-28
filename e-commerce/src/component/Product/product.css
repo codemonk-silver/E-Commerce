@@ -406,8 +406,8 @@
 /* Mobile Small (320px to 479px) */
 @media (max-width: 479px) {
   .productContainer {
-    padding: 1% 5%;
-    height: 50vh;
+    padding: 6% 5%;
+    height: 41vh;
   }
   
   .productTitle {
@@ -432,14 +432,13 @@
   }
   
   .cardWrapper {
-    flex: 0 0 18em;
+    flex: 0 0 12em;
   }
   
   .productCard,
   .imageWrapper {
-    height: 18em !important;
+    height: 12em !important;
     border-radius: 0.4rem;
-    object-fit: cover;
   }
   
   .imageWrapper {
@@ -468,6 +467,7 @@
   
   .productFooter {
     margin-top: 3px;
+    width: 11rem;
   }
   
   .price {
@@ -475,7 +475,7 @@
   }
   
   .cartIcon {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
   
   .sliderIndicators {

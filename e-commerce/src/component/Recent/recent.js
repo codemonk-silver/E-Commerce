@@ -118,7 +118,7 @@ const Recent = () => {
 
         <div className='recentCarousel' ref={carouselRef}>
           {products.map((product) => (
-            <div key={product.id} className="recentcardWrapper">
+            <div key={product.id} className="recentCardWrapper">
               <div className="recentImageWrapper">
                 {product.badge && (
                   <span 
