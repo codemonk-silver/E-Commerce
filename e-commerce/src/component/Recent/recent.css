@@ -12,12 +12,12 @@
   color: #272343;
 }
 
-.carouselWrapper {
+.recentCarouselWrapper {
   position: relative;
   width: 100%;
 }
 
-.carouselButtons {
+.recentCarouselButtons {
   position: absolute;
   top: -58px;
   right: 0;
@@ -25,7 +25,7 @@
   gap: 10px;
 }
 
-.carouselButtons button {
+.recentCarouselButtons button {
   padding: 4px 8px;
   font-size: .8rem;
   border: none;
@@ -37,12 +37,12 @@
   transition: transform 0.2s ease, background 0.3s ease;
 }
 
-.carouselButtons button:hover {
+.recentCarouselButtons button:hover {
   background: #007580;
   transform: scale(1.15) rotate(2deg);
 }
 
-.carouselButtons button:active {
+.recentCarouselButtons button:active {
   transform: scale(0.9);
 }
 
@@ -56,7 +56,7 @@
 }
 
 /* Card wrapper for entrance animation */
-.cardWrapper {
+.recentCardWrapper {
   flex: 0 0 13.5em;
   display: flex;
   flex-direction: column;
@@ -67,10 +67,10 @@
   transform: translateY(40px);
   animation: fadeUp 0.8s ease forwards;
 }
-.cardWrapper:nth-child(odd) {
+.recentCardWrapper:nth-child(odd) {
   animation-delay: 0.2s;
 }
-.cardWrapper:nth-child(even) {
+.recentCardWrapper:nth-child(even) {
   animation-delay: 0.4s;
 }
 
@@ -88,7 +88,7 @@
 }
 
 /* === NEW Badge and Heart Icon === */
-.imageWrapper {
+.recentImageWrapper {
   position: relative;
   width: 100%;
   height: 12em;
@@ -96,7 +96,7 @@
   border-radius: .5rem;
 }
 
-.badgeNew {
+.recentBadgeNew {
   position: absolute;
   top: 10px;    /* not touching top */
   left: 10px;   /* not touching left */
@@ -109,7 +109,7 @@
   z-index: 2;
 }
 
-.heartIcon {
+.recentHeartIcon {
   position: absolute;
   top: 10px;    /* aligned with badgeNew */
   right: 10px;  /* not touching right */
@@ -123,7 +123,7 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.heartIcon:hover {
+.recentHeartIcon:hover {
   transform: scale(1.2);
   color: crimson;
 }
@@ -143,19 +143,19 @@
    margin-top: 6px;
 }
 
-.price {
+.recentPrice {
   font-size: 0.9rem;
   font-weight: 500;
 }
 
-.cartIcon {
+.recentCartIcon {
   font-size: 1rem;
   color: #272343;
   cursor: pointer;
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.cartIcon:hover {
+.recentCartIcon:hover {
   transform: scale(1.2);
   color: #007580;
 }
@@ -197,75 +197,331 @@
 
 
 
-/* ✅ Tablets (768px – 1199px) */
-@media (max-width: 1199px) {
+/* Tablet Portrait (576px to 767px) */
+@media (max-width: 767px) {
   .recentContainer {
-    padding: 2% 10%;
-    height: auto;
+    padding: 1% 10%;
+    height: 40vh;
   }
-  .recentTitle {
-    font-size: 1.3rem;
-    text-align: center;
-  }
-  .carouselButtons {
-    top: -50px;
-    right: 20px;
-  }
-  .cardWrapper {
-    flex: 0 0 11em;
-  }
-  .recentCard,
-  .imageWrapper {
-    height: 11em;
-  }
-  .recentDesc,
-  .price {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .recentContainer {
-    padding: 5% 5%;
-    height: auto;
-  }
-
+  
   .recentTitle {
     font-size: 1.2rem;
-    text-align: center;
+    margin-bottom: 1.5rem;
   }
-
+  
+  .recentCarouselButtons {
+    top: -50px;
+    gap: 8px;
+  }
+  
+  .recentCarouselButtons button {
+    padding: 5px 8px;
+    font-size: 0.75rem;
+  }
+  
   .recentCarousel {
-    gap: 0;
-    scroll-snap-type: x mandatory;
+    gap: 0.6em;
     overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
   }
-
-  .cardWrapper {
-    flex: 0 0 100%; /* One card at a time */
-    scroll-snap-align: start;
-  }
-
-  /* 🔥 Hide navigation buttons on mobile */
-  .carouselButtons {
+  
+  .recentCarousel::-webkit-scrollbar {
     display: none;
+  }
+  
+  .recentCardWrapper {
+    flex: 0 0 10.5em;
+  }
+  
+  .recentCard,
+  .recentImageWrapper {
+    height: 10em;
+  }
+  
+  .recentBadgeNew {
+    font-size: 0.5rem;
+    padding: 2px 6px;
+    top: 8px;
+    left: 8px;
+  }
+  
+  .reentHeartIcon {
+    font-size: 1.1rem;
+    top: 8px;
+    right: 8px;
+    padding: 3px;
+  }
+  
+  .recentDesc {
+    font-size: 0.8rem;
+    margin-top: 6px;
+  }
+  
+  .recentFooter {
+    margin-top: 4px;
+  }
+  
+  .recentPrice {
+    font-size: 0.85rem;
+  }
+  
+  .recentCartIcon {
+    font-size: 0.9rem;
   }
 }
 
-@media (max-width: 480px) {
+/* Mobile Large (480px to 575px) */
+@media (max-width: 575px) {
+  .recentContainer {
+    padding: 1% 8%;
+    height: 38vh;
+  }
+  
+  .recentTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .recentCarouselButtons {
+    top: -45px;
+    gap: 6px;
+  }
+  
+  .recentCarouselButtons button {
+    padding: 4px 7px;
+    font-size: 0.7rem;
+    border-radius: 4px;
+  }
+  
+  .recentCarousel {
+    gap: 0.5em;
+    margin: 0.8em auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .recentCarousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .recentCardWrapper {
+    flex: 0 0 9em;
+  }
+  
+  .recentCard,
+  .recentImageWrapper {
+    height: 9em;
+  }
+  
+  .recentBadgeNew {
+    font-size: 0.45rem;
+    padding: 2px 5px;
+    top: 6px;
+    left: 6px;
+  }
+  
+  .recentHeartIcon {
+    font-size: 1rem;
+    top: 6px;
+    right: 6px;
+    padding: 2px;
+  }
+  
+  .recentDesc {
+    font-size: 0.75rem;
+    margin-top: 5px;
+  }
+  
+  .recentPrice {
+    font-size: 0.8rem;
+  }
+  
+  .recentCartIcon {
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Small (320px to 479px) */
+@media (max-width: 479px) {
+   .recentContainer {
+    padding: 6% 5%;
+    height: 33vh; /* Increased to accommodate 2-slide layout */
+  }
+  
   .recentTitle {
     font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .recentCarouselButtons {
+    top: -40px;
+    gap: 8px;
+  }
+  
+  .recentCarouselButtons button {
+    padding: 3px 6px;
+    font-size: 0.65rem;
+  }
+  
+  .recentCarousel {
+    gap: 0.6em; /* Increased gap for better spacing */
+    margin: 0.6em auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .recentCarousel::-webkit-scrollbar {
+    display: none;
+  }
+  
+   .recentCardWrapper {
+    flex: 0 0 calc(50% - 0.3em);
+    scroll-snap-align: start;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
   }
 
-  .recentDesc {
-    font-size: 0.8rem;
+
+  .recentCard,
+  .recentImageWrapper {
+    height: 10em; /* Increased height for better visibility */
+    border-radius: 0.4rem;
+  }
+  
+
+   .recentImageWrapper {
+    height: 10em !important;
+    border-radius: 0.4rem;
+    display: flex !important;
+    align-items: stretch !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .recentCard {
+    height: 100% !important;
+    width: 100% !important;
+    border-radius: 0.4rem;
+    display: block !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: cover;
+    object-position: center;
   }
 
-  .price {
-    font-size: 0.8rem;
+  
+  .recentBadgeNew {
+    font-size: 0.4rem;
+    padding: 1px 4px;
+    top: 5px;
+    left: 17px;
+    border-radius: 3px;
   }
-
-  .cartIcon {
+  
+  .recentHeartIcon {
     font-size: 0.9rem;
+    top: 5px;
+    right: 17px;
+    padding: 2px;
+  }
+  
+   .recentDesc {
+    font-size: 0.75rem !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 4px !important;
+    line-height: 1.2 !important;
+  }
+  
+  
+    .recentFooter {
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-top: 4px !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+   .recentPrice {
+    font-size: 0.8rem;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  
+  .recentCartIcon {
+    font-size: 0.85rem;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Extra Small Mobile (below 320px) */
+@media (max-width: 319px) {
+  .recentContainer {
+    padding: 1% 3%;
+    height: 32vh;
+  }
+  
+  .recentTitle {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .recentCarouselButtons {
+    top: -35px;
+    gap: 4px;
+  }
+  
+  .recentCarouselButtons button {
+    padding: 2px 5px;
+    font-size: 0.6rem;
+  }
+  
+  .recentCardWrapper {
+    flex: 0 0 7em;
+  }
+  
+  .recentCard,
+  .recentImageWrapper {
+    height: 7em;
+  }
+  
+  .recentBadgeNew {
+    font-size: 0.35rem;
+    padding: 1px 3px;
+    top: 4px;
+    left: 4px;
+  }
+  
+  .recentHeartIcon {
+    font-size: 0.8rem;
+    top: 4px;
+    right: 4px;
+  }
+  
+  .recentDesc {
+    font-size: 0.65rem;
+    margin-top: 3px;
+  }
+  
+  .recentPrice {
+    font-size: 0.7rem;
+  }
+  
+  .recentCartIcon {
+    font-size: 0.75rem;
   }
 }
