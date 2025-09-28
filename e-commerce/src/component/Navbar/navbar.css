@@ -74,6 +74,7 @@
 
 .middlenavright{
     flex-basis: 20%;
+    display: flex;
 }
 
 .middlenavright button{
